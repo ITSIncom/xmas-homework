@@ -5,7 +5,7 @@
         <div class="container row">
             <div class="col">
                 <RouterLink :to="{ name: 'home' }" class="link bold">
-                    Halloween Homework
+                    Xmas Homework
                 </RouterLink>
             </div>
             <div class="col right">

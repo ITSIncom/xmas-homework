@@ -26,7 +26,6 @@
             {
                 answer.value += ".";
             }
-
         }, Random.Integer(250, 750));
     };
 </script>

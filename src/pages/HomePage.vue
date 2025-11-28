@@ -3,12 +3,12 @@
 <template>
     <div id="home-page" class="page">
         <h1 class="my-4">
-            🎃🦇🐈‍⬛🕷️🕸️👻
+            ❄️🎉🎅🎄🎁🎊⛄
         </h1>
-        <h2>Halloween Homework</h2>
+        <h2>Xmas Homework</h2>
         <hr />
         <p>
-            Vi ho preparato qualche esercizio per tenervi in allenamento durante la pausa di Halloween.
+            Vi ho preparato qualche esercizio per tenervi in allenamento durante la pausa di Natale.
             Spero siano stimolanti per tutti!
         </p>
         <p>

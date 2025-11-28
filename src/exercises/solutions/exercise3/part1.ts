@@ -9,7 +9,7 @@ const Answers = [
     "Potresti anche non farlo... Però se lo vuoi fare, fallo.",
     "Non ti permettere... MAI PIÙ!",
     "Se ni' mondo esistesse un po' di bene e ognun si honsiderasse suo fratello" +
-        " ci sarebbe meno pensieri e meno pene e il mondo ne sarebbe assai più bello."
+    " ci sarebbe meno pensieri e meno pene e il mondo ne sarebbe assai più bello."
 ];
 
 export function getAnswer(): string

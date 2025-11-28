@@ -1,37 +1,55 @@
-# Halloween Homework
+# Xmas Homework
 
-🎃🦇🐈‍⬛🕷️🕸️👻
+❄️🎉🎅🎄🎁🎊⛄
 
-## Customize configuration
+## Prerequisites
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Make sure to have [**Bun**](https://bun.com/) installed on your system:
+
+```sh
+# On Linux, MacOS or WSL
+curl -fsSL https://bun.sh/install | bash
+
+# On Windows (sorry 'bout that)
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
 
 ## Project Setup
 
 ```sh
-pnpm install
+bun install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-pnpm run dev
+bun run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Compile and Minify for Production
 
 ```sh
-pnpm run build
+bun run build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-pnpm run lint
+bun run lint
+```
+
+### Type-Check with [TypeScript](https://www.typescriptlang.org/)
+
+```sh
+bun run lint
 ```
 
 ### Run Unit Tests & Watch for Changes
 
 ```sh
-pnpm run test
+bun run test
 ```
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).

@@ -11,18 +11,9 @@
         <RouterLink :to="{ name: 'exercise-3' }" class="btn btn-light">
             [Esercizio 3] Libro delle Risposte
         </RouterLink>
-        <!--RouterLink :to="{ name: 'home' }" class="btn btn-light">
-            Esercizio 2
+        <RouterLink :to="{ name: 'exercise-4' }" class="btn btn-light">
+            [Esercizio 4] Albero di Natale
         </RouterLink>
-        <RouterLink :to="{ name: 'home' }" class="btn btn-light">
-            Esercizio 3
-        </RouterLink>
-        <RouterLink :to="{ name: 'home' }" class="btn btn-light">
-            Esercizio 4
-        </RouterLink>
-        <RouterLink :to="{ name: 'home' }" class="btn btn-light">
-            Esercizio 5
-        </RouterLink-->
     </aside>
 </template>
 
