@@ -1,6 +1,9 @@
 <script lang="ts" setup>
     import { reactive } from "vue";
-    import { Random, range } from "@byloth/core";
+    import { enumerate } from "@byloth/core";
+
+    import AppButton from "@/components/ui/AppButton.vue";
+    import { generateBalls } from "@/exercises/exercise4";
 
     interface Point
     {
@@ -16,19 +19,18 @@
     const COLORS = ["red", "blue", "fuchsia", "yellow", "green"];
 
     const balls = reactive<Ball[]>([]);
-
-    const initialize = () =>
+    const decorate = () =>
     {
-        for (const y of range(17))
+        balls.length = 0;
+
+        const matrix = generateBalls();
+        for (const [y, row] of enumerate(matrix))
         {
-            for (const x of range(13))
+            for (const [x, cell] of enumerate(row))
             {
-                const distanceX = Math.abs(x - 6) - 0.5;
-                const limit = (y / 16) * 6;
+                if (cell === 0) { continue; }
 
-                if (distanceX > limit) { continue; }
-
-                const color = Random.Choice(COLORS);
+                const color = COLORS[cell - 1];
                 const _x = (x * 7.5) + 2.5;
                 const _y = (y * 5) + 3.25;
 
@@ -38,33 +40,38 @@
             }
         }
     };
-
-    initialize();
 </script>
 
 <template>
     <div id="exercise-4" class="container page">
         <h1>[Esercizio 4] Albero di Natale</h1>
-        <div class="xmas-tree-container inset-form">
-            <div class="xmas-tree">
-                <svg class="pine-tree" viewBox="0 0 75 100">
-                    <rect x="32.5"
-                          y="85.5"
-                          width="10"
-                          height="14"
-                          fill="#5D4037"
-                          stroke="#3E2723"
-                          stroke-width="0.5" />
-                    <polygon points="37.5,0.5 0.5,85 74.5,85"
-                             fill="#2E7D32"
-                             stroke="#1B5E20"
-                             stroke-width="0.5" />
-                </svg>
-                <img v-for="ball, index in balls"
-                     :key="index"
-                     class="xmas-ball"
-                     :src="`/static/images/balls/${ball.color}.png`"
-                     :style="{ left: ball.position.x + '%', top: ball.position.y + '%' }" />
+        <div class="row">
+            <div class="xmas-tree-container inset-form">
+                <div class="xmas-tree">
+                    <svg class="pine-tree" viewBox="0 0 75 100">
+                        <rect x="32.5"
+                              y="85.5"
+                              width="10"
+                              height="14"
+                              fill="#5D4037"
+                              stroke="#3E2723"
+                              stroke-width="0.5" />
+                        <polygon points="37.5,0.5 0.5,85 74.5,85"
+                                 fill="#2E7D32"
+                                 stroke="#1B5E20"
+                                 stroke-width="0.5" />
+                    </svg>
+                    <img v-for="ball, index in balls"
+                         :key="index"
+                         class="xmas-ball"
+                         :src="`/static/images/balls/${ball.color}.png`"
+                         :style="{ left: ball.position.x + '%', top: ball.position.y + '%' }" />
+                </div>
+            </div>
+            <div class="col">
+                <AppButton theme="success" @click="decorate">
+                    Addobba l'albero!
+                </AppButton>
             </div>
         </div>
     </div>
@@ -76,25 +83,29 @@
         margin-top: var(--navigation-bar-height);
         padding-top: 1em;
 
-        & > .xmas-tree-container
+        & > .row
         {
-            aspect-ratio: 3 / 4;
-            height: calc(100dvh - var(--navigation-bar-height) - 7.5em);
-            margin: 1.5em 0px;
-            padding: 1em;
-
-            & > .xmas-tree
+            & > .xmas-tree-container
             {
-                position: relative;
+                aspect-ratio: 3 / 4;
+                height: calc(100dvh - var(--navigation-bar-height) - 7.5em);
+                margin: 1.5em 0px;
+                padding: 1em;
+                width: auto;
 
-                & > .pine-tree
+                & > .xmas-tree
                 {
-                    height: 100%;
-                }
-                & > .xmas-ball
-                {
-                    position: absolute;
-                    width: 5%;
+                    position: relative;
+
+                    & > .pine-tree
+                    {
+                        height: 100%;
+                    }
+                    & > .xmas-ball
+                    {
+                        position: absolute;
+                        width: 5%;
+                    }
                 }
             }
         }
