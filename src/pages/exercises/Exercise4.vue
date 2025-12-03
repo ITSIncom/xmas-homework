@@ -4,6 +4,7 @@
 
     import AppButton from "@/components/ui/AppButton.vue";
     import { generateBalls } from "@/exercises/exercise4";
+import AlertBox from "@/components/ui/AlertBox.vue";
 
     interface Point
     {
@@ -45,6 +46,11 @@
 <template>
     <div id="exercise-4" class="container page">
         <h1>[Esercizio 4] Albero di Natale</h1>
+        <AlertBox theme="warning"
+                  title="Attenzione!"
+                  icon="triangle-exclamation">
+            Questo esercizio non è ancora completo. Diventerà disponibile in una prossima versione.
+        </AlertBox>
         <div class="row">
             <div class="xmas-tree-container inset-form">
                 <div class="xmas-tree">
