@@ -13,8 +13,8 @@
         </p>
         <p>
             Io ho badato all'interfaccia e al suo funzionamento,
-            ma le logiche "core" di cosa dovrà essere fatto è tutta a vostro carico.<br />
-            Tutto quello che dovrete fare è aprire la directory <code>src/exercises</code> e
+            ma le logiche "core" di cosa dovrà essere fatto sono tutte a vostro carico.<br />
+            Vi basterà aprire la directory <code>src/exercises</code> e
             completare i file relativi ad ogni esercizio.
         </p>
         <p>
@@ -30,6 +30,11 @@
             delle funzioni <b><u>NON</u></b> sono modificabili.<br />
             Se sono presenti dei parametri, dovranno essere rispettati.
             Lo stesso vale per un eventuale tipo di ritorno.
+        </p>
+        <p>
+            Nessuno - però - vi vieta di creare altre e nuove funzioni di "supporto"
+            all'interno dei file degli esercizi, qualora lo riteneste necessario.<br />
+            Anzi: è caldamente consigliato! 😉
         </p>
         <div>
             <RouterLink class="btn btn-primary" :to="{ name: 'exercise-1' }">

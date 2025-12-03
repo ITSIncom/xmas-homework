@@ -36,7 +36,7 @@
         <p>
             Questo esercizio pone il suo focus sull'uso degli <strong>array</strong>.<br />
             Per risolvere questo esercizio, vi serviranno gli array e
-            -tendenzialmente- l'uso della funzione <code>Math.random()</code>.
+            - tendenzialmente - l'uso della funzione <code>Math.random()</code>.
         </p>
         <hr />
         <h2 class="my-4">
